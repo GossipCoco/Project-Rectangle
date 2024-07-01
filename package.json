@@ -1,0 +1,14 @@
+{
+    "name": "rectangle-drawer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/main.js",
+    "scripts": {
+      "build": "tsc && npx ncp src/index.html dist/index.html && npx ncp src/styles.css dist/styles.css"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "typescript": "^4.0.0",
+      "ncp": "^2.0.0"
+    }
+  }
