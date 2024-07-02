@@ -10,6 +10,7 @@ class Rectangle {
       this.addEventListeners();
     }
   
+    // Création de l'élément Div class Rectangle
     private createElement(): HTMLDivElement {
       const rect = document.createElement('div');
       rect.classList.add('rectangle');
@@ -20,11 +21,11 @@ class Rectangle {
       rect.style.left = `${this.x - this.size / 2}px`;
       return rect;
     }
-  
+  // Ecouteur d'évènement
     private addEventListeners() {
       this.element.addEventListener('dblclick', this.handleDoubleClick.bind(this));
     }
-  
+  // Au double clic, l'élément tourne 360deg et disparaît
     private handleDoubleClick() {
       this.element.style.transition = 'transform 1s';
       this.element.style.transform = 'rotate(360deg)';
