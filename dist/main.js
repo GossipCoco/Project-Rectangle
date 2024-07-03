@@ -8,6 +8,7 @@ var Rectangle = /** @class */ (function () {
         this.element = this.createElement();
         this.addEventListeners();
     }
+    // Création de l'élément Div class Rectangle
     Rectangle.prototype.createElement = function () {
         var rect = document.createElement('div');
         rect.classList.add('rectangle');
@@ -18,9 +19,11 @@ var Rectangle = /** @class */ (function () {
         rect.style.left = "".concat(this.x - this.size / 2, "px");
         return rect;
     };
+    // Ecouteur d'évènement
     Rectangle.prototype.addEventListeners = function () {
         this.element.addEventListener('dblclick', this.handleDoubleClick.bind(this));
     };
+    // Au double clic, l'élément tourne 360deg et disparaît
     Rectangle.prototype.handleDoubleClick = function () {
         var _this = this;
         this.element.style.transition = 'transform 1s';
